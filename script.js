@@ -137,6 +137,7 @@ console.log(ages);
 //* Basic array operations
 
 //Add element
+/*
 const friends = ["Anup", "Bigyan", "Bibek", "Daman", "Pritika", "Susan"];
 const newLength = friends.push("Jay"); //last
 console.log(newLength);
@@ -157,3 +158,57 @@ console.log(friends);
 console.log(friends.indexOf("Pritika"));
 
 console.log(friends.includes("Ram"));
+*/
+//? Coding challenge 2
+
+/*
+const calcTip = function (billValue) {
+  const tip =
+    50 <= billValue && billValue <= 300 ? 0.15 * billValue : 0.2 * billValue;
+
+  return tip;
+};
+
+const bills = [125, 555, 44];
+
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log(tips);
+console.log(total);
+
+*/
+
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedtnam",
+  age: 2037 - 1991,
+  job: "teacher",
+  friends: ["Anup", "Bigyan", "Bibek", "Daman", "Pritika", "Susan"],
+};
+
+console.log(jonas);
+console.log(jonas.lastName);
+console.log(jonas["lastName"]);
+
+const nameKey = "Name";
+console.log(jonas["first" + nameKey]);
+
+const interestedIn = prompt(
+  "What do you want to know about Jonas? Choose Between firstName,lastName,age,job and friends"
+);
+// console.log(jonas[interestedIn]);
+
+if (jonas[interestedIn]) {
+  console.log(jonas[interestedIn]);
+} else {
+  console.log("Wrong Choice");
+}
+
+jonas.location = "Portugal";
+jonas["twitter"] = "@prazol";
+console.log(jonas);
+
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best 
+friend is called ${jonas.friends[3]}`);
