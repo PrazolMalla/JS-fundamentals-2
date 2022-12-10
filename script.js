@@ -249,6 +249,7 @@ console.log(jonas.summerierJonas());
 
 //? Coding Challenge 3
 
+/*
 const miller = {
   firstName: "Mark",
   lastName: "Miller",
@@ -282,3 +283,130 @@ const higher = function () {
 };
 
 console.log(higher());
+*/
+
+// console.log("Lifting weight repetition 1");
+// console.log("Lifting weight repetition 1");
+// console.log("Lifting weight repetition 1");
+// console.log("Lifting weight repetition 1");
+// console.log("Lifting weight repetition 1");
+// console.log("Lifting weight repetition 1");
+// console.log("Lifting weight repetition 1");
+// console.log("Lifting weight repetition 1");
+// console.log("Lifting weight repetition 1");
+
+//for loop
+/*
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weight repetition ${rep}`);
+}
+*/
+/*
+const jonasArray = [
+  "Jonas",
+  "Schmedtmann",
+  2037 - 1991,
+  "teacher",
+  ["Michael", "Peter", "Steven"],
+];
+
+
+for (let i = 0; i < jonasArray.length; i++) {
+  console.log(jonasArray[i]);
+}
+
+//* continue and break;
+
+
+console.log("---ONLY STRINGS---");
+for (let i = 0; i < jonasArray.length; i++) {
+  if (typeof jonasArray[i] !== "string") continue;
+  console.log(jonasArray[i]);
+}
+
+console.log("---Break with number ---");
+for (let i = 0; i < jonasArray.length; i++) {
+  if (typeof jonasArray[i] === "number") break;
+  console.log(jonasArray[i]);
+}
+
+*/
+
+/*
+//* backward loops
+const jonasArray = [
+  "Jonas",
+  "Schmedtmann",
+  2037 - 1991,
+  "teacher",
+  ["Michael", "Peter", "Steven"],
+];
+
+for (let i = jonasArray.length - 1; i >= 0; i--) {
+  console.log(jonasArray[i]);
+}
+
+//* loop inside loop
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`-------stating exercise ${exercise}`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Execise ${exercise} lifting weight repetition ${rep}`);
+  }
+}
+*/
+
+//* while loop
+
+// let rep = 1;
+// while (rep <= 10) {
+//   console.log(`Lifting weight repetition ${rep}`);
+//   rep++;
+// }
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+// while (dice !== 6) {
+//   console.log(`You rolled a ${dice}`);
+//   dice = Math.trunc(Math.random() * 6) + 1;
+//   if (dice === 6) console.log(`Loop is about to end.. `);
+// }
+
+do {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log(`Loop is about to end.. `);
+} while (dice !== 6);
+
+//? coding challenge 4
+
+const bill = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const calcTip = function (billValue) {
+  const tip =
+    50 <= billValue && billValue <= 300 ? 0.15 * billValue : 0.2 * billValue;
+
+  return tip;
+};
+
+let tips = [];
+let total = [];
+for (let i = 0; i < bill.length; i++) {
+  tips[i] = calcTip(bill[i]);
+  total[i] = tips[i] + bill[i];
+}
+
+console.log(tips);
+console.log(total);
+
+//? bonus challenge
+
+const calcAverage = function (arr) {
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i];
+  }
+  return total / arr.length;
+};
+
+console.log(calcAverage(bill));
