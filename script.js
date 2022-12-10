@@ -179,7 +179,7 @@ console.log(tips);
 console.log(total);
 
 */
-
+/*
 const jonas = {
   firstName: "Jonas",
   lastName: "Schmedtnam",
@@ -212,3 +212,73 @@ console.log(jonas);
 
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best 
 friend is called ${jonas.friends[3]}`);
+*/
+/*
+const jonas = {
+  
+  firstName: "Jonas",
+  lastName: "Schmedtnam",
+  birthYear: 1991,
+  job: "teacher",
+  friends: ["Anup", "Bigyan", "Bibek", "Daman", "Pritika", "Susan"],
+  hasDriverLicense: false,
+  calcAge: function (birthYear) {
+    return 2037 - birthYear;
+  },
+
+  calcAge: function () {
+    return 2037 - this.birthYear;
+  },
+
+  calcAge: function () {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+
+  summerierJonas: function () {
+    return `${this.firstName} is a ${this.age} old ${this.job},and he has ${
+      this.hasDriverLicense ? "a" : "no"
+    } driver's license`;
+  },
+};
+
+console.log(jonas.calcAge());
+console.log(jonas.age);
+console.log(jonas.summerierJonas());
+*/
+
+//? Coding Challenge 3
+
+const miller = {
+  firstName: "Mark",
+  lastName: "Miller",
+  mass: 78,
+  height: 1.69,
+
+  calcBMI: function () {
+    this.BMI = this.mass / this.height ** 2;
+    return this.BMI;
+  },
+};
+
+const smith = {
+  firstName: "John",
+  lastName: "Smith",
+  mass: 92,
+  height: 1.95,
+
+  calcBMI: function () {
+    this.BMI = this.mass / this.height ** 2;
+    return this.BMI;
+  },
+};
+
+const higher = function () {
+  if (miller.calcBMI() > smith.calcBMI()) {
+    return `${miller.firstName}'s BMI (${miller.BMI}) is higher than ${miller.firstName}'s BMI (${smith.BMI})`;
+  } else {
+    return `${smith.firstName}'s BMI (${smith.BMI}) is higher than ${miller.firstName}'s BMI (${miller.BMI})`;
+  }
+};
+
+console.log(higher());
